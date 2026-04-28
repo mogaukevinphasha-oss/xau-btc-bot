@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phasha FX Bot Controller</title>
+</head>
+<body style="background:black; color:white; text-align:center;">
+    <h1>PHASHA FX BOT CONTROL</h1>
+
+    <button onclick="send('start')">START BOT</button><br><br>
+    <button onclick="send('stop')">STOP BOT</button><br><br>
+    <button onclick="send('buy')">BUY</button><br><br>
+    <button onclick="send('sell')">SELL</button><br><br>
+
+    <script>
+        function send(action) {
+            fetch('/' + action)
+        }
+    </script>
+</body>
+</html>
