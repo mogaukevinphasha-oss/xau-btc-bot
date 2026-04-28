@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PHASHA FX BOT</title>
+    <style>
+        body {
+            background: black;
+            color: white;
+            text-align: center;
+            font-family: Arial;
+        }
+        h1 {
+            margin-top: 40px;
+        }
+        button {
+            width: 200px;
+            height: 60px;
+            margin: 10px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .start { background: green; }
+        .stop { background: red; }
+        .buy { background: blue; }
+        .sell { background: orange; }
+    </style>
+</head>
+
+<body>
+
+<h1>🔥 PHASHA FX BOT CONTROL</h1>
+
+<button class="start" onclick="send('start')">START BOT</button><br>
+<button class="stop" onclick="send('stop')">STOP BOT</button><br>
+<button class="buy" onclick="send('buy')">BUY</button><br>
+<button class="sell" onclick="send('sell')">SELL</button>
+
+<script>
+function send(action) {
+    fetch('/' + action)
+    .then(res => alert(action.toUpperCase() + " SENT"))
+}
+</script>
+
+</body>
+</html>
